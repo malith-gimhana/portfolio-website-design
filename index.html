@@ -2,410 +2,545 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>complete responsive personal portfolio website design tutorial</title>
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <!-- custom css file link  -->
+    <title> Malith Gimhana</title>
+    <!------font awesome cdn link---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!------custom css file link---->
     <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+   <link rel="shortcut icon" type="image/png" href="data:image/png;base64,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">
+
+
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/61610c13157d100a41ab85ae/1fhhhec2n';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+
+
 
 </head>
 <body>
+
+    
+   <!------header section starts ------>
    
-<!-- header section starts  -->
+   <header>
+       <div id="menu" class="fas fa-bars"></div>
 
-<header>
+       <nav class="navbar">
+           <a href="#home">home</a>
+           <a href="#about">about</a>
+           <a href="#portfolio">portfolio</a>
+           <a href="#codes">source codes</a>
+           <a href="#contact">contact</a>
+       </nav>
 
-    <div id="menu" class="fas fa-bars"></div>
+       <div id="theme-toggler" class="fas fa-moon"></div>
 
-    <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#about">about</a>
-        <a href="#services">services</a>
-        <a href="#portfolio">portfolio</a>
-        <a href="#blog">blog</a>
-        <a href="#contact">contact</a>
-    </nav>
+   </header>
 
-    <div id="theme-toggler" class="fas fa-moon"></div>
+   <!------header section ends ------>
 
-</header>
+   <!------home section starts ------>
+   <section class="home" id="home">
+       <div class="image">
+           <img src="images/rob.jpg">
+       </div>
+       <div class="content">
+           <span class="hello">hello</span>
+           <h3> I'M <span class="malith">MALITH GIMHANA</span></h3>
+           <p>Hi! I am Malith Gimhana.Wellcome to my personal website.</p>
+           <a href="#about" class="btn">about me</a>
+       </div>
+   </section>
+   
+   <!------home section ends ------>
 
-<!-- header section ends -->
-
-<!-- home section starts  -->
-
-<section class="home" id="home">
-
-    <div class="image">
-        <img src="images/main-img.jpg" alt="">
-    </div>
-
-    <div class="content">
-        <span class="hello">hello</span>
-        <h3> I'M <span>GENIE FRANCIS</span> </h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio doloribus ullam at commodi sit, excepturi dicta minus cumque rerum quod nisi sapiente accusantium, accusamus a atque totam adipisci. Quas, error?</p>
-        <a href="#about" class="btn">about me</a>
-    </div>
-
-</section>
-
-<!-- home section ends -->
-
-<section class="about" id="about">
-
-    <h1 class="heading"> about <span>me</span> </h1>
+   <section class="about" id="about">
+       
+    <h1 class="heading">about <span>me</span></h1>
 
     <div class="row">
-
         <div class="box">
-            <h3 class="title">coding skills</h3>
+            <h3 class="title">coding skils</h3>
             <div class="progress">
-                <h3> html <span>95%</span> </h3>
+               <h3> html <span>60%</span></h3> 
+               <div class="bar"><span></span></div>
+            </div>
+            <div class="progress">
+                <h3> css <span>40%</span></h3> 
                 <div class="bar"><span></span></div>
             </div>
             <div class="progress">
-                <h3> css <span>80%</span> </h3>
+                <h3> js <span>10%</span></h3> 
                 <div class="bar"><span></span></div>
             </div>
             <div class="progress">
-                <h3> js <span>65%</span> </h3>
-                <div class="bar"><span></span></div>
-            </div>
-            <div class="progress">
-                <h3> sass <span>75%</span> </h3>
+                <h3> python <span>5%</span></h3> 
                 <div class="bar"><span></span></div>
             </div>
         </div>
 
-        <div class="box">
-            <h3 class="title">professional skills</h3>
-            <div class="progress">
-                <h3> web design <span>98%</span> </h3>
-                <div class="bar"><span></span></div>
-            </div>
-            <div class="progress">
-                <h3> web development <span>67%</span> </h3>
-                <div class="bar"><span></span></div>
-            </div>
-            <div class="progress">
-                <h3> graphic design <span>75%</span> </h3>
-                <div class="bar"><span></span></div>
-            </div>
-            <div class="progress">
-                <h3> seo marketing <span>60%</span> </h3>
-                <div class="bar"><span></span></div>
-            </div>
-        </div>
+   
+
+        
 
         <div class="box">
-            <h3 class="title">experience</h3>
+            <h3 class="title">about me</h3>
             <div class="exp-box">
-                <h3>front end development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia consequatur impedit dolor vel aperiam assumenda consequuntur quibusdam. Illo, dolorum nihil!</p>
+                <h3>full name</h3>
+                <p>Malith Gimhana</p>
             </div>
             <div class="exp-box">
-                <h3>front end development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia consequatur impedit dolor vel aperiam assumenda consequuntur quibusdam. Illo, dolorum nihil!</p>
+                <h3>live</h3>
+                <p>Handapangoda, Sri Lanka</p>
             </div>
             <div class="exp-box">
-                <h3>front end development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia consequatur impedit dolor vel aperiam assumenda consequuntur quibusdam. Illo, dolorum nihil!</p>
-            </div>
-        </div>
-
-        <div class="box">
-            <h3 class="title">education</h3>
-            <div class="exp-box">
-                <h3>mumbai university</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia consequatur impedit dolor vel aperiam assumenda consequuntur quibusdam. Illo, dolorum nihil!</p>
+                <h3>School</h3>
+                <p>WP/H Handapangoda Maha Vidyalaya</p>
             </div>
             <div class="exp-box">
-                <h3>mumbai university</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia consequatur impedit dolor vel aperiam assumenda consequuntur quibusdam. Illo, dolorum nihil!</p>
-            </div>
-            <div class="exp-box">
-                <h3>mumbai university</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia consequatur impedit dolor vel aperiam assumenda consequuntur quibusdam. Illo, dolorum nihil!</p>
+                <h3>hobbies</h3>
+                <p>learning programming, video editing, graphic designing</p>
             </div>
         </div>
-
     </div>
 
     <div class="download">
         <a href="#" class="btn"> download CV </a>
     </div>
 
-</section>
+   </section>
 
-<!-- service section starts  -->
 
-<section class="services" id="services">
 
-    <h1 class="heading"> <span>my</span> services </h1>
+   <!---portfolio section starts---->
 
-    <div class="box-container">
+   <section class="portfolio" id="portfolio">
 
-        <div class="box">
-            <span class="number">1</span>
-            <img src="images/s1.png" alt="">
-            <h3>seo marketing</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita harum consectetur quae eligendi saepe vitae ut animi in fuga dolorem.</p>
-        </div>
-
-        <div class="box">
-            <span class="number">2</span>
-            <img src="images/s2.png" alt="">
-            <h3>graphic design</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita harum consectetur quae eligendi saepe vitae ut animi in fuga dolorem.</p>
-        </div>
-
-        <div class="box">
-            <span class="number">3</span>
-            <img src="images/s3.png" alt="">
-            <h3>digital marketing</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita harum consectetur quae eligendi saepe vitae ut animi in fuga dolorem.</p>
-        </div>
-
-        <div class="box">
-            <span class="number">4</span>
-            <img src="images/s4.png" alt="">
-            <h3>data analysis</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita harum consectetur quae eligendi saepe vitae ut animi in fuga dolorem.</p>
-        </div>
-
-        <div class="box">
-            <span class="number">5</span>
-            <img src="images/s5.png" alt="">
-            <h3>web development</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita harum consectetur quae eligendi saepe vitae ut animi in fuga dolorem.</p>
-        </div>
-
-        <div class="box">
-            <span class="number">6</span>
-            <img src="images/s6.png" alt="">
-            <h3>web design</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita harum consectetur quae eligendi saepe vitae ut animi in fuga dolorem.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- service section ends -->
-
-<!-- portfolio section starts  -->
-
-<section class="portfolio" id="portfolio">
-
-    <h1 class="heading"> <span>my</span> portfolio </h1>
+    <h1 class="heading">my <span>portfolio</span></h1>
 
     <div class="button-container">
         <div class="btn" data-filter="all">all</div>
-        <div class="btn" data-filter="design">design</div>
-        <div class="btn" data-filter="code">code</div>
-        <div class="btn" data-filter="website">website</div>
-        <div class="btn" data-filter="brand">brand</div>
+        <div class="btn" data-filter="design">complete websites</div>
+        <div class="btn" data-filter="glassmorphism">glassmorphism</div>
+        <div class="btn" data-filter="code">other</div>
+        <div class="btn" data-filter="apps">apps</div>
+        
     </div>
 
     <div class="image-container">
 
         <div class="box design">
-            <img src="images/img1.jpg" alt="">
+            <a href="https://malith-gimhana.github.io/university.github.io/">
+            <img src="images/p1.png">
             <div class="info">
-                <h3>PROJECT TITLE</h3>
+                <h3>University website design</h3>
             </div>
-        </div>
-
-        <div class="box design">
-            <img src="images/img2.jpg" alt="">
-            <div class="info">
-                <h3>PROJECT TITLE</h3>
-            </div>
-        </div>
-
-        <div class="box design">
-            <img src="images/img3.jpg" alt="">
-            <div class="info">
-                <h3>PROJECT TITLE</h3>
-            </div>
+            </a>
         </div>
 
         <div class="box code">
-            <img src="images/img4.jpg" alt="">
+            <a href="https://malith-gimhana.github.io/backgroundvideo.github.io/">
+            <img src="images/p9.png">
             <div class="info">
-                <h3>PROJECT TITLE</h3>
+                <h3>Background in video</h3>
             </div>
+            </a>
+        </div>
+
+        <div class="box design">
+            <a href="https://malith-gimhana.github.io/saloonpage.github.io/">
+            <img src="images/p3.png">
+            <div class="info">
+                <h3>Salon website design</h3>
+            </div>
+            </a>
+        </div>
+
+        <div class="box design">
+            <a href="https://malith-gimhana.github.io/agencywebsite.github.io/">
+            <img src="images/p4.png">
+            <div class="info">
+                <h3>Agency website design</h3>
+            </div>
+            </a>
+        </div>
+
+        <div class="box glassmorphism">
+            <a href="https://malith-gimhana.github.io/glassmorphismcalculator.github.io/">
+            <img src="images/p8.png">
+            <div class="info">
+                <h3>Working glassform <br><center>calculator</center></h3>
+            </div>
+            </a>
+        </div>
+
+
+        <div class="box design">
+            <a href="https://malith-gimhana.github.io/fitnees.github.io/">
+            <img src="images/p10.png">
+            <div class="info">
+                <h3>Gym website design</h3>
+            </div>
+            </a>
+        </div>
+
+     
+        <div class="box code">
+            <a href="https://malith-gimhana.github.io/practicles.github.io/">
+            <img src="images/p5.png">
+            <div class="info">
+                <h3>Practicle Js</h3>
+            </div>
+            </a>
+        </div>
+
+        <div class="box design">
+            <a href="https://malith-gimhana.github.io/travelpage.github.io/">
+            <img src="images/p2.png">
+            <div class="info">
+                <h3>Travel website design</h3>
+            </div>
+            </a>
         </div>
 
         <div class="box code">
-            <img src="images/img5.jpg" alt="">
+            <a href="https://malith-gimhana.github.io/downloadbtn.github.io/">
+            <img src="images/p6.png">
             <div class="info">
-                <h3>PROJECT TITLE</h3>
+                <h3>Download button</h3>
             </div>
+            </a>
         </div>
 
-        <div class="box website">
-            <img src="images/img6.jpg" alt="">
+        <div class="box code">
+            <a href="https://malith-gimhana.github.io/calculator.github.io/">
+            <img src="images/p7.png">
             <div class="info">
-                <h3>PROJECT TITLE</h3>
+                <h3>Working calculator</h3>
             </div>
+            </a>
         </div>
 
-        <div class="box brand">
-            <img src="images/img7.jpg" alt="">
+
+        <div class="box code">
+            <a href="https://malith-gimhana.github.io/neonbutton/">
+            <img src="images/p11.png">
             <div class="info">
-                <h3>PROJECT TITLE</h3>
+                <h3>Neon button</h3>
             </div>
+            </a>
         </div>
 
-        <div class="box brand">
-            <img src="images/img8.jpg" alt="">
+        <div class="box code">
+            <a href="https://malith-gimhana.github.io/imageslider.github.io/">
+            <img src="images/p12.png">
             <div class="info">
-                <h3>PROJECT TITLE</h3>
+                <h3>Image slider</h3>
             </div>
+            </a>
         </div>
 
-        <div class="box brand">
-            <img src="images/img9.jpg" alt="">
+        <div class="box code">
+            <a href="https://malith-gimhana.github.io/imagesliderautoplay.github.io/">
+            <img src="images/p13.png">
             <div class="info">
-                <h3>PROJECT TITLE</h3>
+                <h3>Auto playing Image slider</h3>
             </div>
+            </a>
         </div>
+
+        <div class="box code">
+            <a href="https://malith-gimhana.github.io/animatedfooter.github.io/">
+            <img src="images/p14.png">
+            <div class="info">
+                <h3>Animated footer</h3>
+            </div>
+            </a>
+        </div>
+
+        <div class="box glassmorphism">
+            <a href="https://malith-gimhana.github.io/glassmorphismcalender.github.io/">
+            <img src="images/p15.png">
+            <div class="info">
+                <h3>Glassmorphism Calender</h3>
+            </div>
+            </a>
+        </div>
+
+        <div class="box glassmorphism">
+            <a href="https://malith-gimhana.github.io/Glassmorpism-Analog-Clock/">
+            <img src="images/p16.png">
+            <div class="info">
+                <h3>Glassmorpism Analog Clock</h3>
+            </div>
+            </a>
+        </div>
+
+        <div class="box design">
+            <a href="https://fasttester.tk/">
+            <img src="images/p17.png">
+            <div class="info">
+                <h3>Internet Speed Tester</h3>
+            </div>
+            </a>
+        </div>
+
+        <div class="box apps">
+            <a href="apps/app-debug.apk" download="apps/app-debug.apk">
+            <img src="images/p17.png">
+            <div class="info">
+                <h3>Internet Speed Test App Download</h3>
+            </div>
+            </a>
+        </div>
+
+        <div class="box design">
+            <a href="https://freechatapp.tk/">
+            <img src="images/p18.png">
+            <div class="info">
+                <h3>FreeChat App</h3>
+            </div>
+            </a>
+        </div>
+
+        <div class="box apps">
+            <a href="apps/app-debug.apk" download="apps/FreeChat">
+            <img src="images/p18.png">
+            <div class="info">
+                <h3>FreeChat App Download</h3>
+            </div>
+            </a>
+        </div>
+
+
+      
+
 
     </div>
 
-</section>
+   </section>
 
-<!-- portfolio section ends -->
+    <!---portfolio section ends---->
 
-<!-- blog section start  -->
+       <!---codes section starts---->
 
-<section class="blog" id="blog">
+   <section class="services" id="codes">
 
-    <h1 class="heading"> <span>my</span> blogs </h1>
+    <h1 class="heading">my <span>source codes</span></h1>
 
-    <div class="box-container">
 
-        <div class="box">
-            <img src="images/blog1.jpg" alt="">
-            <div class="content">
-                <h3 class="info"> <i class="fas fa-user"></i> by, admin <i class="fas fa-calendar"></i> 1st may, 2021 </h3>
-                <a href="#" class="title"> blog title goes here </a>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum in molestias deleniti fugit excepturi atque cum animi harum distinctio et.</p>
-                <a href="#" class="btn">read more</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/blog2.jpg" alt="">
-            <div class="content">
-                <h3 class="info"> <i class="fas fa-user"></i> by, admin <i class="fas fa-calendar"></i> 1st may, 2021 </h3>
-                <a href="#" class="title"> blog title goes here </a>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum in molestias deleniti fugit excepturi atque cum animi harum distinctio et.</p>
-                <a href="#" class="btn">read more</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/blog3.jpg" alt="">
-            <div class="content">
-                <h3 class="info"> <i class="fas fa-user"></i> by, admin <i class="fas fa-calendar"></i> 1st may, 2021 </h3>
-                <a href="#" class="title"> blog title goes here </a>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum in molestias deleniti fugit excepturi atque cum animi harum distinctio et.</p>
-                <a href="#" class="btn">read more</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/blog4.jpg" alt="">
-            <div class="content">
-                <h3 class="info"> <i class="fas fa-user"></i> by, admin <i class="fas fa-calendar"></i> 1st may, 2021 </h3>
-                <a href="#" class="title"> blog title goes here </a>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum in molestias deleniti fugit excepturi atque cum animi harum distinctio et.</p>
-                <a href="#" class="btn">read more</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/blog5.jpg" alt="">
-            <div class="content">
-                <h3 class="info"> <i class="fas fa-user"></i> by, admin <i class="fas fa-calendar"></i> 1st may, 2021 </h3>
-                <a href="#" class="title"> blog title goes here </a>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum in molestias deleniti fugit excepturi atque cum animi harum distinctio et.</p>
-                <a href="#" class="btn">read more</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/blog6.jpg" alt="">
-            <div class="content">
-                <h3 class="info"> <i class="fas fa-user"></i> by, admin <i class="fas fa-calendar"></i> 1st may, 2021 </h3>
-                <a href="#" class="title"> blog title goes here </a>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum in molestias deleniti fugit excepturi atque cum animi harum distinctio et.</p>
-                <a href="#" class="btn">read more</a>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- blog section ends -->
-
-<!-- contact section starts  -->
-
-<section class="contact" id="contact">
-
-    <h1 class="heading"> contact <span>me</span> </h1>
-
-    <div class="box-container">
+    <div class="button-container">
+        <div class="btn" data-filter="all">all</div>
+        <div class="btn" data-filter="design">complete websites</div>
+        <div class="btn" data-filter="glassmorphism">glassmorphism</div>
+        <div class="btn" data-filter="code">other</div>
         
-        <div class="box">
-            <i class="fas fa-phone"></i>
-            <h3>my number</h3>
-            <p>+123-456-7890</p>
+    </div>
+
+    <div class="box-container">
+        <div class="box design">
+            <span class="number">1</span>
+            <img src="images/s5.png">
+            <h3>University website design</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/university.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box code">
+            <span class="number">2</span>
+            <img src="images/s6.png">
+            <h3>Background in video</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/backgroundvideo.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box design">
+            <span class="number">3</span>
+            <img src="images/s5.png">
+            <h3>Salon website design</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/saloonpage.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box design">
+            <span class="number">4</span>
+            <img src="images/s5.png">
+            <h3>Agency website design</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/agencywebsite.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box glassmorphism">
+            <span class="number">5</span>
+            <img src="images/s3.png">
+            <h3>Working glassform calculator</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/glassmorphismcalculator.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box design">
+            <span class="number">6</span>
+            <img src="images/s5.png">
+            <h3>Gym website design</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/fitnees.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box code">
+            <span class="number">7</span>
+            <img src="images/s6.png">
+            <h3>Practicle Js</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/practicles.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box design">
+            <span class="number">8</span>
+            <img src="images/s5.png">
+            <h3>Travel website design</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/travelpage.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box code">
+            <span class="number">9</span>
+            <img src="images/s6.png">
+            <h3>Download button</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/downloadbtn.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box code">
+            <span class="number">10</span>
+            <img src="images/s6.png">
+            <h3>Working calculator</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/calculator.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box code">
+            <span class="number">11</span>
+            <img src="images/s6.png">
+            <h3>Neon button</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/neonbutton/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box code">
+            <span class="number">12</span>
+            <img src="images/s6.png">
+            <h3>Image slider</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/imageslider.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box code">
+            <span class="number">13</span>
+            <img src="images/s6.png">
+            <h3>Auto playing Image slider</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/imagesliderautoplay.github.io/archive/refs/heads/main.zip"><div class="btn">click to download <i class="fas fa-download"></i></div></a>
+        </div>
+        <div class="box code">
+            <span class="number">14</span>
+            <img src="images/s6.png">
+            <h3>Animated footer</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/animatedfooter.github.io/archive/refs/heads/main.zip"><div class="btn">click to download  <i class="fas fa-download"></i></div></a>
         </div>
 
-        <div class="box">
-            <i class="fas fa-envelope"></i>
-            <h3>my email</h3>
-            <p>example@gmail.com</p>
+        <div class="box glassmorphism">
+            <span class="number">15</span>
+            <img src="images/s3.png">
+            <h3>Glassmorphis Calculator</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/glassmorphismcalender.github.io/archive/refs/heads/main.zip"><div class="btn">click to download  <i class="fas fa-download"></i></div></a>
         </div>
 
-        <div class="box">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>my address</h3>
-            <p>mumbai, india - 400104</p>
+        <div class="box glassmorphism">
+            <span class="number">16</span>
+            <img src="images/s3.png">
+            <h3>Glassmorpism Analog Clock</h3>
+            <p></p>
+            <a href="https://github.com/malith-gimhana/Glassmorpism-Analog-Clock/archive/refs/heads/master.zip"><div class="btn">click to download  <i class="fas fa-download"></i></div></a>
         </div>
+
 
     </div>
 
-    <div class="row">
+  </section>
 
-        <form action="">
-            <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
+  <!---codes section ends---->
+
+
+    <!---blog section starts---->
+
+    <!---blog section ends---->
+
+    <!----contact section starts--->
+
+     <section class="contact" id="contact">
+
+         <h1 class="heading"> contact <span>me</span></h1>
+
+         <div class="box-container">
+
+           
+
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <h3>my email</h3>
+                <p>malithgimhana095@gmail.com</p>
             </div>
-            <input type="text" placeholder="subject">
-            <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
-            <button class="btn"> send message </button>
-        </form>
 
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1617786516134!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+           
 
-    </div>
+         </div>
 
-</section>
+         <div class="row">
+           
+            <img src="images/ht.png">
+         </div>
 
-<!-- contact section ends -->
+     </section>
 
-<!-- footer section  -->
+    <!----contact section ends--->
 
-<div class="footer">created by <span> mr. web designer </span> | all rights reserved!</div>
+    <!--footer section-->
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/malith-gimhana">
+                <i class="fab fa-github"></i>
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.facebook.com/Malith-Gimhana-102186928849095">
+                <i class="fab fa-facebook-f"></i>
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.instagram.com/gimhana_malith/">
+                <i class="fab fa-instagram"></i>
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://twitter.com/MalithGimhana2">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+        
+        </div>
+        <div class="fot" style="background: #4c84ff;">
+            <p style="color: #fff; padding: 15px 0;" align="center";>
+                
+                Copyright © 2021 | Created by |    <span><i class="fas fa-heart"></i> Malith Gimhana <i class="fas fa-heart"></i></span>   | All Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+
+   
 
 
 
@@ -413,27 +548,12 @@
 
 
 
+   <!------]jquery cdn link---->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 
+   <!----custom js file link----->
+   <script src="script.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- jquery cdn link  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<!-- custom js file link  -->
-<script src="script.js"></script>
 
 </body>
 </html>
